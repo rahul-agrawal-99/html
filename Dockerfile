@@ -1,4 +1,3 @@
-FROM ubuntu/apache2:latest
-USER root
-COPY /home/web-server/cloud-web/ /var/www/html/
-EXPOSE 80
+FROM httpd:latest
+WORKDIR /usr/local/apache2/htdocs/
+ADD ./html/ /usr/local/apache2/htdocs/
